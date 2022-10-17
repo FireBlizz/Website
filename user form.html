@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css" >
+    <script defer src="validation.js"></script>
+</head>
+<body>
+
+    <script src="js/Header.js"></script>    
+    <div class="info">
+    <!-- create a form-->
+    <form name="user form" method="post" onSubmit="return validate()">
+        <h1>Personal Information</h1>
+        <!-- for the personal information-->
+        <div>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required >
+        </div>
+        <div>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required >
+        </div>
+        <div>
+            <p>Gender</p>
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="male" id="male" value="male" required >
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" name="female" id="female" value="female" required >
+            </div>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" required >
+        </div>
+        <div>
+            <label for="date">Birth of date</label>
+            <input type="date" name="date" id="date" required >
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required >
+        </div>
+        <div>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required >
+        </div>
+        <div>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required >
+        </div>
+        <div>
+            <label for="pn">Phone number:</label>
+            <input type="tel" id="pn" name="phone number" required >
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div>
+                (Email must be correct as it will be used to send booking confirmation)
+            </div>
+        </div>
+        <div>
+            <!-- A section that customers are able to select a service-->
+            <label for="Service">Service</label>
+            <select name="Service" id="Service">
+                <option value="blank">Blank</option>
+                <option value="blank">Blank</option>
+                <option value="blank">Blank</option>
+                <option value="blank">Blank</option> 
+                <option value="blank">Blank</option> 
+                <option value="blank">Blank</option>     
+            </select>
+        </div>
+        <div>
+            <label for="agree">Agree all conditions</lable>
+            <input type="checkbox" name="agree" id="agree" required>
+        </div>
+        <div>
+            <!-- A section for payment details-->
+            <p>Pyament</p>
+            <div>
+                <label for="cn">Card number</label>
+                <input type="text" name="cn" id="cn">
+            </div>
+            <div>
+                <label for="name">Name on Card</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="cvv">CVV</label>
+                <input type="text" name="cvv" id="cvv">
+            </div>
+            <div>
+                <label for="edate">Expriation date</label>
+                <input type="date" id="edate" name="edate">
+            </div>
+        </div>
+        <div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+        
+    </form>
+    <!-- Javascript-->
+    <script src="js/Footer.js"></script>
+    <script type="text/javascript">
+        function validate()
+        {
+            var first=document.forms["user form"]["fname"].value;
+            var last=document.forms["user form"]["lname"].value;
+            var male=document.forms["user form"]["male"].value;
+            var female=document.forms["user form"]["female"].value;
+            var age=document.forms["user form"]["age"].value;
+            var date=document.forms["user form"]["date"].value;
+            var address=document.forms["user form"]["address"].value;
+            var city=document.forms["user form"]["city"].value;
+            var state=document.forms["user form"]["state"].value;
+            var pn=document.forms["user form"]["pn"].value;
+            var email=document.forms["user form"]["email"].value;
+            var Service=document.forms["user form"]["Service"].value;
+            var edate=doucment.forms["user form"]["edate"].value;
+
+
+            if(first =="")
+            {
+                alert("enter the name");
+                return false;
+            }
+            if(last =="")
+            {
+                alert("enter the name");
+                return false;
+            }
+            if(first =="")
+            {
+                alert("enter date");
+                return false;
+            }
+            var at = email.indexOf("@");
+            var dot= email.lastIndexOf(".");
+            if(at<1||dot<at+2||dot+2>=email.length)
+            {
+                alert("not a valid email")
+                return false;
+            }
+            if(pn =="")
+            {
+                alert("enter phone number")
+                return false
+            }
+            if(edate=="")
+            {
+                alert("enter the expiration date")
+                return false
+            }
+
+
+        }
+    </script>
+</body>
+</html>
