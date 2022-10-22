@@ -46,31 +46,15 @@ footer {
   color: white;
 }
 
-/*home apge, div 1*/
-.home1 {
-  width: 500;
-  border: 1px hidden;
-  padding: 5px;
-  margin: 5px;
-}
-
-/*home page, div 2 */
-.home2 {
-  width: 500px;
-  border: 15px solid green;
-  padding: 500px;
-  margin: 20px;
-}
-
 /*detail page, container holding the image and the text */
-.container {
+.detail_container {
   position: relative;
   border: 5px hidden;
   padding: 5px;
   margin: 5px;
 }
 
-/*deatil page, bottom left text */
+/*deatil page, bottom left text block thats on both images */
 .text-block {
   position: absolute;
   bottom: 20px;
@@ -81,15 +65,5 @@ footer {
   padding-right: 20px;
 }
 
-/*source page, bottom left text */
-.text-block2 {
-  position: absolute;
-  bottom: 20px;
-  left: 200px;
-  background-color: Gray;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
 
