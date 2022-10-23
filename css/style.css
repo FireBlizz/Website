@@ -2,10 +2,12 @@
 
 
 /*background color */
-body {background-color: darkgray;}
+.detailBody {background-color: darkgray;}
+.userFormBody {background-color: darkgray;}
+
 
 /*Header, inclues Nav bar and logo */
-ul {
+.jsHeaderUnorderd {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -14,11 +16,11 @@ ul {
   background-color: #f3f3f3;
 }
 
-li {
+.jsHeaderListItem {
   float: left;
 }
 
-li a {
+.jsHeaderInner{
   display: block;
   color: #666;
   text-align: center;
@@ -26,20 +28,19 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+.jsHeaderInner:hover:not(.active) {
   background-color: #ddd;
 }
 
-li a.active {
+.jsHeaderInner.active {
   color: white;
   background-color: #04AA6D;
 }
 
 /*Footer */
-footer {
+.jsFooter {
   left: 0;
   bottom: 0;
-  width: 100%;
   text-align: Left;
   padding: 10px;
   background-color: Gray;
@@ -47,7 +48,7 @@ footer {
 }
 
 /*detail page, container holding the image and the text */
-.detail_container {
+.detailContainer {
   position: relative;
   border: 5px hidden;
   padding: 5px;
@@ -55,7 +56,7 @@ footer {
 }
 
 /*deatil page, bottom left text block thats on both images */
-.text-block {
+.detailTextBlock {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -64,15 +65,18 @@ footer {
   padding-left: 20px;
   padding-right: 20px;
 }
-
-.btn{
-  margin-top: 1rem;
-  display: inline-block;
-  font-size:1.7rem;
-  color:#fff;
-  background: var(--black);
-  border-radius: .5rem;
-  cursor: pointer;
-  padding:.8rem 3rem;
+.userFormInfo{
+  width: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: left;
 }
+.userFormButton{
+    padding: 10px 0;
+    outline: none;
+    background: transparent;
+    width: 20%;
+    cursor: pointer;
+	}
+
 

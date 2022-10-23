@@ -1,2 +1,2 @@
 //made for a constistant Footer for all pages that includes who owns the website and a link to a source page for all imagees used
-document.write('<footer><p>Website owned by Food Food and more Food</p></footer>')
+document.write('<footer class="jsFooter"><p>Website owned by Food Food and more Food</p></footer>')
